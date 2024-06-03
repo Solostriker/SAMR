@@ -1,0 +1,2 @@
+# SAMR
+testing idea out
