@@ -1,0 +1,8 @@
+# Compile with profiling enabled
+mpic++ -o mpi_simulation mpi_simulation.cpp
+
+# Run the program with perf
+mpirun -np 4 perf record -o perf.data -- ./mpi_simulation 5000 5 3
+
+# Generate the profiling report
+perf report -i perf.data > perf_analysis.txt
